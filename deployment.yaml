@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: todo-pod
-        image: latestb1090a8de8198ac3c7c58681bef1220d024ddb5d
+        image: latest2c9c23f0231bf22abbebd77c05457c02031019e3
         ports:
         - containerPort: 8000   
 
