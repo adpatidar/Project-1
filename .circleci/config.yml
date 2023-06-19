@@ -55,7 +55,7 @@ jobs:
          name: updated dev manifest
       - run:
           command: |
-            kubectl apply -f deployment.yaml
+            /usr/local/bin/kubectl/kubectl apply -f deployment.yaml
           name: Deploy on dev env
 workflows:
   build-push-deploy:
