@@ -38,7 +38,7 @@ jobs:
          name: updated prod manifest
       - run:
           command: |
-            kubectl apply -f deployment.yaml
+            /usr/bin/kubectl/kubectl apply -f deployment.yaml
           name: Deploy on prod env        
   deploy-dev:
     docker:
