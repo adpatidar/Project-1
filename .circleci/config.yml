@@ -38,10 +38,10 @@ jobs:
          name: updated prod manifest
       - run:
           command: |
-            echo "running deployment on prod env"
-            cat deployment.yaml
-#            kubectl apply -f deployment.yaml
-#            kubectl get deployment -n=todo-app-ns
+#            echo "running deployment on prod env"
+#            cat deployment.yaml
+            kubectl apply -f deployment.yaml
+ #           kubectl get deployment -n=todo-app-ns
           name: Deploy on prod env        
   deploy-dev:
     docker:
@@ -58,9 +58,9 @@ jobs:
          name: updated dev manifest
       - run:
           command: |
-            echo "running deployment on dev env"
-            cat deployment.yaml
-#            kubectl apply -f deployment.yaml
+#            echo "running deployment on dev env"
+#            cat deployment.yaml
+            kubectl apply -f deployment.yaml
 #            kubectl get deployment -n=todo-app-ns
           name: Deploy on dev env
 workflows:
