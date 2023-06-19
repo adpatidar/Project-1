@@ -1,1 +1,1 @@
-**Jenkins multibranch CI/Cd with webhook to deploy node js app on kubernetes cluster.**
+**Circleci multibranch CI/CD to deploy node js app with EKS cluster.**
