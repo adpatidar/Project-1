@@ -30,6 +30,10 @@ jobs:
         type: string
     steps:
       - checkout
+      - aws-eks/update-kubeconfig-with-authenticator:
+          cluster-name: << parameters.cluster-name >>
+          aws-region: $AWS_REGION
+          install-kubectl: true
       - run:
          command: |
            sed -i "s+latest+$ECR_URI+" deployment.yaml
@@ -50,6 +54,10 @@ jobs:
         type: string
     steps:
       - checkout
+      - aws-eks/update-kubeconfig-with-authenticator:
+          cluster-name: << parameters.cluster-name >>
+          aws-region: $AWS_REGION
+          install-kubectl: true
       - run:
          command: sed -i "s+latest.*+$ECR_URI$CIRCLE_SHA1+" deployment.yaml
          name: updated dev manifest
