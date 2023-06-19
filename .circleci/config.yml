@@ -18,7 +18,7 @@ jobs:
             git config user.name admin
             git add deployment.yaml
             git commit -m "Updated image $CIRCLE_SHA1 [skip ci]" 
-            git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/circleci.git
+            git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/Project-1.git
           name: Push to github
   deploy-prod:
     docker:
