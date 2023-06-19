@@ -38,7 +38,7 @@ jobs:
          name: updated prod manifest
       - run:
           command: |
-            /usr/bin/kubectl/kubectl apply -f deployment.yaml
+            /usr/bin/kubectl apply -f deployment.yaml
           name: Deploy on prod env        
   deploy-dev:
     docker:
@@ -55,7 +55,7 @@ jobs:
          name: updated dev manifest
       - run:
           command: |
-            /usr/local/bin/kubectl/kubectl apply -f deployment.yaml
+            /usr/local/bin/kubectl apply -f deployment.yaml
           name: Deploy on dev env
 workflows:
   build-push-deploy:
